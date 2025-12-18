@@ -245,9 +245,10 @@ footer .row {
 
 /* --------------------------- */
 /* --------------------------- */
-/* media */
+/* Исправленные медиазапросы */
 
-@media (width <= 768px) {
+/* Для планшетов и меньше (≤ 768px) */
+@media (max-width: 768px) {
     .container {
         min-width: auto;
         padding: 0 15px;
@@ -304,7 +305,8 @@ footer .row {
     }
 }
 
-@media (width <= 480px) {
+/* Для мобильных телефонов (≤ 480px) */
+@media (max-width: 480px) {
     .container {
         padding: 0 10px;
     }
@@ -335,11 +337,7 @@ footer .row {
         height: 150px;
     }
     
-    h1 {
-        font-size: 2rem;
-    }
-    
-    .news__text h2 {
+    h2 {
         font-size: 1.6rem;
     }
     
@@ -356,5 +354,12 @@ footer .row {
     footer {
         padding: 15px 0;
         height: auto;
+    }
+}
+
+/* Добавил для десктопа (> 768px) - показываем aside */
+@media (min-width: 769px) {
+    .main__aside {
+        display: flex;
     }
 }
